@@ -2,71 +2,103 @@ module.exports = {
   people: [
     {
       "name" : "Susanna Chapman", 
-      "company" : "Zoa"
+      "company" : "Zoa",
+      "role": "Student"
    },
    {
      "name" : "Shalima Khanum", 
-     "company" : "Octopus Investments"
+     "company" : "Octopus Investments",
+     "role": "Student"
    },
    {
       "name" : "Robert-Adrian Pavaloiu", 
-      "company" : "VoucherCodes"
+      "company" : "VoucherCodes",
+      "role": "Student"
    },
  {
    "name" : "Naima Afrah", 
-   "company" : "Barclays"
+   "company" : "Barclays",
+   "role": "Student"
 },
 {
   "name" : "Talha Faisal", 
-  "company" : "Barclays"
+  "company" : "Barclays",
+  "role": "Student"
 },
 {
   "name" : "Elliott Turner", 
-  "company" : "Barclays"
+  "company" : "Barclays",
+  "role": "Student"
 },
 {
   "name" : "Muhsin Osoble", 
-  "company" : "HCL Tech"
+  "company" : "HCL Tech",
+  "role": "Student"
 },
 {
   "name" : "Ismail Yusuf", 
-  "company" : "HCL Tech"
+  "company" : "HCL Tech",
+  "role": "Student"
 },
 {
   "name" : "Darius Muntean", 
-  "company" : "HCL Tech"
+  "company" : "HCL Tech",
+  "role": "Student"
 },
 {
   "name" : "Jumana Rahim", 
-  "company" : "Octopus Energy"
+  "company" : "Octopus Energy",
+  "role": "Student"
 },
 {
   "name" : "Yassir Candido", 
-  "company" : "Octopus Energy"
+  "company" : "Octopus Energy",
+  "role": "Student"
 },
 {
   "name" : "Kareema Bint-Abdul Wahid", 
-  "company" : "Octopus Energy"
+  "company" : "Octopus Energy",
+  "role": "Student"
 },
 {
   "name" : "Frank Tennant", 
-  "company" : "Warner Music"
+  "company" : "Warner Music",
+  "role": "Student"
 },
 {
   "name" : "Michael Wanyoike Rachon", 
-  "company" : "Warner Music"
+  "company" : "Warner Music",
+  "role": "Student"
 },
 {
   "name" : "Vitalie Dragan", 
-  "company" : "Warner Music"
+  "company" : "Warner Music",
+  "role": "Student"
 },
 {
   "name" : "Olaleye Oduola", 
-  "company" : "Warner Music"
+  "company" : "Warner Music",
+  "role": "Student"
 },
 {
   "name" : "Kate Howlett", 
-  "company" : "Norfolk County Council"
+  "company" : "Norfolk County Council",
+  "role": "Student"
+},
+{
+  "name" : "Craig Banyard", 
+  "company" : "Multiverse",
+  "role": "Coach"
+},
+{
+  "name" : "Kieran Barker", 
+  "company" : "Multiverse",
+  "role": "Coach"
+},
+{
+  "name" : "Simon Haines", 
+  "company" : "Multiverse",
+  "role": "Coach"
 },
 //   ],
 //   items: [
