@@ -25,7 +25,7 @@ export const App = () => {
 
 	return (
 		<main>	
-      <h1>Person Store</h1>
+			<h1>Person Store</h1>
 			<h2>All things 🔥</h2>
 			<PeopleList people={people} />
 		</main>

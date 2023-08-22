@@ -5,7 +5,7 @@ export const PeopleList = ({people}) => {
 	return <>
 		{
 			people.map((person, idx) => {
-				return <person person={person} key={idx} />
+				return <Person person={person} key={idx} />
 			})
 		}
 	</>
