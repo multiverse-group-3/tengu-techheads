@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PeopleList } from './PeopleList';
+import { Button } from './Button';
 
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
@@ -28,6 +29,7 @@ export const App = () => {
 			<h1>Person Store</h1>
 			<h2>All things 🔥</h2>
 			<PeopleList people={people} />
+			<Button>Add cohort member</Button>
 		</main>
 	)
 }
