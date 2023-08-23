@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { PeopleList } from './PeopleList';
 import apiURL from '../api';
+import { Button } from './Button';
 
 export const Button = () => {
 
-    const [button, setButton] = useState();
+    const [isFormVisible, setIsFormVisible] = useState(false);
 
     function handleClick() {
-        setButton();
+        setIsFormVisible(!isFormVisible);
     }
 
     return (
@@ -17,6 +18,25 @@ export const Button = () => {
             </h5>
             <button onClick={handleClick}> add member
             </button>
+            {isFormVisible && (
+                <form>
+                    <p>
+                        <label htmlFor='name' >
+                            Name
+                        </label>
+                        <br/>
+                        <input id="name" type="text"/>
+                    </p>
+                    <p>
+                        <label>
+
+                        </label>
+                    </p>
+                    <p>
+                        <button>Submit</button>
+                    </p>
+                </form>
+            )}
         </div>
     );
 
