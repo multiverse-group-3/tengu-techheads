@@ -48,7 +48,8 @@ module.exports = {
     {
       "name" : "Darius Muntean", 
       "company" : "HCL Tech",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_m8Ba9y42.png"
     },
     {
       "name" : "Jumana Rahim", 
@@ -81,12 +82,14 @@ module.exports = {
     {
       "name" : "Vitalie Dragan", 
       "company" : "Warner Music",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1154050_V1o1LCyQ.png"
     },
     {
       "name" : "Olaleye Oduola", 
       "company" : "Warner Music",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_KSmXxmxa.png"
     },
     {
       "name" : "Kate Howlett", 
