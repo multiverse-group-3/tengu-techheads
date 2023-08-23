@@ -4,7 +4,8 @@ const {sequelize} = require('../db')
 const Person = sequelize.define("people", {
   name: Sequelize.STRING,
   company: Sequelize.STRING,
-  role: Sequelize.STRING
+  role: Sequelize.STRING,
+  image: Sequelize.STRING
 });
 
 module.exports = {
