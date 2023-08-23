@@ -12,15 +12,14 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET a person
-router.get("/:id", async (req, res, next) => {
-  const personId = req.params.id;
+router.post("/", async (req, res, next) => {
   try {
-    const person = await Person.findByPk(personId);
-    res.send(person);
+    const person = await Person.create(req.body);
+    res.status(201).send(person);
   } catch (error) {
     next(error);
   }
-})
+});
+
 
 module.exports = router;
