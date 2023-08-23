@@ -6,10 +6,37 @@ import { Button } from './Button';
 export const Button = () => {
 
     const [isFormVisible, setIsFormVisible] = useState(false);
+    const [newMember, setNewMember] = useState({
+        name: "",
+        company: "",
+        role: "",
+        picture: "",
+    });
 
     function handleClick() {
         setIsFormVisible(!isFormVisible);
-    }
+    };
+
+    function handleChange(event) {
+        const id = event.target.id
+        setNewMember({
+            ...newMember, 
+            [id]:event.target.value,
+        })
+    };
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const res = await fetch(`${apiURL}/people`, {
+            method: "POST",
+            headers: {"content-type": "application/JSON"},
+            body: JSON.stringify(newMember)
+        })
+        if (res.ok) {
+            const person = await res.json()
+            console.log(person)
+        }
+    };
 
     return (
         <div className = "button">
@@ -19,18 +46,38 @@ export const Button = () => {
             <button onClick={handleClick}> add member
             </button>
             {isFormVisible && (
-                <form>
+                <form onSubmit={handleSubmit}>
                     <p>
                         <label htmlFor='name' >
                             Name
                         </label>
                         <br/>
-                        <input id="name" type="text"/>
+                        <input id="name" type="text" value={newMember.name} onChange={handleChange}/>
                     </p>
                     <p>
-                        <label>
-                            
+                        <label htmlFor='company'>
+                            Company name
                         </label>
+                        <br/>
+                        <input id="company" type="text" value={newMember.company} onChange={handleChange}/>
+                    </p>
+                    <p>
+                        <label htmlFor='role'>
+                            Title
+                        </label>
+                        <br/>
+                        <select className="target" id="role" onChange={handleChange} value={newMember.role}> 
+                            <option value="" >Please choose...</option>
+                            <option value="student" > Student </option>
+                            <option value="coach" > Coach </option>
+                        </select>
+                    </p>
+                    <p>
+                        <label htmlFor='picture'>
+                            Member picture
+                        </label>
+                        <br/>
+                        <input id="picture" type="text" value={newMember.picture} onChange={handleChange}/>
                     </p>
                     <p>
                         <button>Submit</button>
@@ -42,6 +89,5 @@ export const Button = () => {
 
 };
 
-// export default Button;
 
 
