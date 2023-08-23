@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Person } = require("../models");
 
-// GET /Person
+// GET /people
 router.get("/", async (req, res, next) => {
   try {
     const people = await Person.findAll();
@@ -20,5 +20,6 @@ router.post("/", async (req, res, next) => {
     next(error);
   }
 });
+
 
 module.exports = router;
