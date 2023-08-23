@@ -5,6 +5,7 @@ import { Button } from './Button';
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
 import { Person } from './Person';
+import { deleteButton } from './DeleteButton';
 
 export const App = () => {
 
@@ -64,17 +65,54 @@ export const App = () => {
 		fetchPeople();
 	}, []);
 
+
+	// async function deleteButton () {
+	//   console.log("I have been summoned")
+	// 	try {
+	// 		const response = await fetch(`${apiURL}/people/${id},` 
+	// 			{method: 'DELETE'});
+	// 		const personData = await response.json();
+	// 		console.log(personData)
+	// 		setPerson(personData);
+	// 		showPerson = true;
+	// 	} catch (err) {
+	// 		console.log("Oh no an error! ", err)
+	// 	}
+	// }
+
+	// const deleteMethod = {
+	// 	method: 'DELETE', // Method itself
+	// 	headers: {
+	// 	 'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+	// 	},
+	// 	// No need to have body, because we don't send nothing to the server.
+	//    }
+	//    // Make the HTTP Delete call using fetch api
+	//    fetch(url, deleteMethod) 
+	//    .then(response => response.json())
+	//    .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
+	//    .catch(err => console.log(err)) 
+	// }
+
+	function deleteButton(id) {
+		return fetch(`${apiURL}/people/${id}`, {
+		  method: 'delete'
+		})
+		.then(response => response.json());
+	}
+
 	if(person){
 		return (
 			<main>
 				<button onClick={showAll}>All</button>
+				<button onClick={deleteButton}>Delete person</button>
 				<div id="person">
 					<img src={person.image} width="200" height="200" />
 					<h3>{person.name}</h3>
 					<p>{person.company}</p>
 					<p>{person.role}</p>
 				</div>
-			</main>
+			</main> 
 		)
 	}
 	return (
