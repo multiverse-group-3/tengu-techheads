@@ -10,7 +10,7 @@ export const Button = () => {
         name: "",
         company: "",
         role: "",
-        picture: "",
+        image: "",
     });
 
     function handleClick() {
@@ -73,11 +73,11 @@ export const Button = () => {
                         </select>
                     </p>
                     <p>
-                        <label htmlFor='picture'>
+                        <label htmlFor='image'>
                             Member picture
                         </label>
                         <br/>
-                        <input id="picture" type="text" value={newMember.picture} onChange={handleChange}/>
+                        <input id="image" type="text" value={newMember.image} onChange={handleChange}/>
                     </p>
                     <p>
                         <button>Submit</button>
