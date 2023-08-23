@@ -5,7 +5,7 @@ const Person = sequelize.define("people", {
   name: Sequelize.STRING,
   company: Sequelize.STRING,
   role: Sequelize.STRING,
-  picture: Sequelize.STRING
+  image: Sequelize.STRING
 });
 
 module.exports = {
