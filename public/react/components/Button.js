@@ -4,10 +4,10 @@ import apiURL from '../api';
 
 export const Button = () => {
 
-    const [button, setButton] = useState(0);
+    const [button, setButton] = useState();
 
     function handleClick() {
-        setButton(count + 1);
+        setButton();
     }
 
     return (
