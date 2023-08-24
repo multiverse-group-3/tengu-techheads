@@ -3,24 +3,55 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #e4ecf1;
+}
 #root {
   display: flex;
+  background-color: #e4ecf1;
 }
 
-h2 {
+h1 {
   font-family: "Roboto Slab", serif;
+  text-align: center;
+  font-size: 3rem;
+}
+
+h3 {
+  text-align: center;
 }
 
 main {
   display: flex;
   flex-direction: column;
   font-family: "Montserrat";
+  margin: 50px
 }
 
 navbar {
   display: flex;
-  background-color: #797a9e;
+  justify-content: space-between;
   margin: 5px;
+  padding: 15px;
+  background-color: #c9d9e3;
+  width: 100%;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 0.4em;
+  border: none;
+  background-color: #eeb3aa;
+  color: #323031;
+}
+
+button:hover {
+  color: #eeb3aa;
+  background-color: #494647;
+  cursor: pointer;
 }
 
 #cards {
@@ -29,8 +60,9 @@ navbar {
 }
 
 #person {
-  background-color: #ffc300;
+  background-color: #ffd770;
   margin: 5px;
   padding: 5px;
   border: #797a9e solid 2px;
+  text-align: center;
 }

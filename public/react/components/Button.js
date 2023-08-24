@@ -43,7 +43,7 @@ export const Button = () => {
             <h5 className = "button-title">
 
             </h5>
-            <button onClick={handleClick}> add member
+            <button onClick={handleClick}>Add member
             </button>
             {isFormVisible && (
                 <form onSubmit={handleSubmit}>
