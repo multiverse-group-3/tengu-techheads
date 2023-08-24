@@ -1,5 +1,36 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(223, 223, 223);
+}
+
+#root {
+  display: flex;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+}
+
+navbar {
+  display: flex;
+  background-color: #797a9e;
+  margin: 5px;
+}
+
+#cards {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#person {
+  background-color: #ffc300;
+  margin: 5px;
+  padding: 5px;
+  border: #797a9e solid 2px;
 }
