@@ -83,10 +83,7 @@ export const App = () => {
 				<h1>The Tengu Techheads</h1>
 				<navbar>
 					<div id="update">
-						<button onClick={{() => {
-					deleteButton(person.id);
-					setPerson(null)
-					}}}>Delete person</button>
+						<button onClick={() => { deleteButton(person.id); setPerson(null) }}>Delete person</button>
 					</div>
 					<div id="filter">
 						<button onClick={showAll}>All</button>
