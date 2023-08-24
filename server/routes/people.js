@@ -32,5 +32,19 @@ router.get("/:id", async (req, res, next) => {
   }
 })
 
+// DELETE a person
+router.delete("/:id", async (req, res, next) => {
+  try {
+    const person = await Person.findByPk(req.params.id);
+
+  await person.destroy()
+
+  res.json({})
+  } catch (error) {
+    next(error);
+  }
+})
+
+
 
 module.exports = router;
