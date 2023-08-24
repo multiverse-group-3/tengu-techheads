@@ -21,5 +21,16 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// GET a person
+router.get("/:id", async (req, res, next) => {
+  const personId = req.params.id;
+  try {
+    const person = await Person.findByPk(personId);
+    res.send(person);
+  } catch (error) {
+    next(error);
+  }
+})
+
 
 module.exports = router;

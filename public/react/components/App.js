@@ -117,12 +117,16 @@ export const App = () => {
 	}
 	return (
 		<main>	
-			<Button>Add cohort member</Button>
 			<h2>All the things 🔥 woop woop!</h2>
-			<button onClick={showStudents}>Students</button>
-			<button onClick={showCoaches}>Coaches</button>
-			<button onClick={showAll}>All</button>
-			<PeopleList people={filteredPeople} fetchPerson={fetchPerson} />
+			<navbar>
+				<Button>Add cohort member</Button>
+				<button onClick={showStudents}>Students</button>
+				<button onClick={showCoaches}>Coaches</button>
+				<button onClick={showAll}>All</button>
+			</navbar>
+			<div id="cards">
+				<PeopleList people={filteredPeople} fetchPerson={fetchPerson} />
+			</div>
 		</main>
 	)
 }

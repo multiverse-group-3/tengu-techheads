@@ -21,12 +21,14 @@ module.exports = {
     {
       "name" : "Naima Afrah", 
       "company" : "Barclays",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_ZN7jzj5X.png"
     },
     {
       "name" : "Talha Faisal", 
       "company" : "Barclays",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_IWUCaoIu.png"
     },
     {
       "name" : "Elliott Turner", 
@@ -37,7 +39,8 @@ module.exports = {
     {
       "name" : "Muhsin Osoble", 
       "company" : "HCL Tech",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_KGIWpYvJ.png"
     },
     {
       "name" : "Ismail Yusuf", 
@@ -61,12 +64,13 @@ module.exports = {
       "name" : "Yassir Candido", 
       "company" : "Octopus Energy",
       "role": "Student",
-      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_ACfJhQZ4.png"
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_rxfgIcG0.png"
     },
     {
       "name" : "Kareema Bint-Abdul Wahid", 
       "company" : "Octopus Energy",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/2129045_X7av8vz0.png"
     },
     {
       "name" : "Frank Tennant", 
@@ -77,7 +81,8 @@ module.exports = {
     {
       "name" : "Michael Wanyoike Rachon", 
       "company" : "Warner Music",
-      "role": "Student"
+      "role": "Student",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_j3uKmCYy.png"
     },
     {
       "name" : "Vitalie Dragan", 
@@ -114,6 +119,12 @@ module.exports = {
       "company" : "Multiverse",
       "role": "Coach",
       "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_TVv6ohUZ.png"
+    },
+    {
+      "name" : "Newt", 
+      "company" : "Zoa",
+      "role": "Newt",
+      "image": "https://cdn.picrew.me/shareImg/org/202308/1905574_G3eF8AP1.png"
     }
- ]
+  ]
 };
