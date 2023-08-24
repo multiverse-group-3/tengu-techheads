@@ -104,25 +104,39 @@ export const App = () => {
 	if(person){
 		return (
 			<main>
-				<button onClick={showAll}>All</button>
-				<button onClick={deleteButton}>Delete person</button>
+				<h1>The Tengu Techheads</h1>
+				<navbar>
+					<div id="update">
+						<button onClick={deleteButton}>Delete person</button>
+					</div>
+					<div id="filter">
+						<button onClick={showAll}>All</button>
+					</div>
+				</navbar>
 				<div id="person">
 					<img src={person.image} width="200" height="200" />
 					<h3>{person.name}</h3>
 					<p>{person.company}</p>
 					<p>{person.role}</p>
+					<p>{person.quote}</p>
+					<p>{person.pokemon}</p>
+					<p>{person.fact}</p>
 				</div>
 			</main> 
 		)
 	}
 	return (
 		<main>	
-			<h2>All the things 🔥 woop woop!</h2>
+			<h1>The Tengu Techheads</h1>
 			<navbar>
-				<Button>Add cohort member</Button>
-				<button onClick={showStudents}>Students</button>
-				<button onClick={showCoaches}>Coaches</button>
-				<button onClick={showAll}>All</button>
+					<div id="update">
+						<Button>Add cohort member</Button>
+					</div>
+					<div id="filter">
+						<button onClick={showStudents}>Students</button>
+						<button onClick={showCoaches}>Coaches</button>
+						<button onClick={showAll}>All</button>
+					</div>
 			</navbar>
 			<div id="cards">
 				<PeopleList people={filteredPeople} fetchPerson={fetchPerson} />
