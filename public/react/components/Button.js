@@ -34,6 +34,7 @@ export const Button = () => {
         })
         if (res.ok) {
             const person = await res.json()
+            console.log(person)
         }
     };
 
