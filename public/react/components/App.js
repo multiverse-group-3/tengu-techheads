@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PeopleList } from './PeopleList';
 import { Button } from './Button';
+import { UpdatePerson } from './UpdatePerson'
 
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
@@ -35,11 +36,9 @@ export const App = () => {
 	}
 
 	async function fetchPerson (id){
-	  console.log("I have been summoned")
 		try {
 			const response = await fetch(`${apiURL}/people/${id}`);
 			const personData = await response.json();
-			console.log(personData)
 			setPerson(personData);
 			showPerson = true;
 		} catch (err) {
@@ -81,14 +80,15 @@ export const App = () => {
 		return (
 			<main>
 				<h1>The Tengu Techheads</h1>
-				<navbar>
+				<nav>
 					<div id="update">
 						<button onClick={() => { deleteButton(person.id); setPerson(null) }}>Delete person</button>
+						<UpdatePerson person={person}/>
 					</div>
 					<div id="filter">
 						<button onClick={showAll}>All</button>
 					</div>
-				</navbar>
+				</nav>
 				<div id="person">
 					<img src={person.image} width="200" height="200" />
 					<h3>{person.name}</h3>
@@ -104,7 +104,7 @@ export const App = () => {
 	return (
 		<main>	
 			<h1>The Tengu Techheads</h1>
-			<navbar>
+			<nav>
 					<div id="update">
 						<Button>Add cohort member</Button>
 					</div>
@@ -113,7 +113,7 @@ export const App = () => {
 						<button onClick={showCoaches}>Coaches</button>
 						<button onClick={showAll}>All</button>
 					</div>
-			</navbar>
+			</nav>
 			<div id="cards">
 				<PeopleList people={filteredPeople} fetchPerson={fetchPerson} />
 			</div>
