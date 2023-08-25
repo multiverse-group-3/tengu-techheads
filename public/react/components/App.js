@@ -89,14 +89,16 @@ export const App = () => {
 						<button onClick={showAll}>All</button>
 					</div>
 				</nav>
-				<div id="person">
-					<img src={person.image} width="200" height="200" />
-					<h3>{person.name}</h3>
-					<p>{person.company}</p>
-					<p>{person.role}</p>
-					<p>{person.quote}</p>
-					<p>{person.pokemon}</p>
-					<p>{person.fact}</p>
+				<div id="cards">
+					<div id="person">
+						<img src={person.image} width="200" height="200" />
+						<h3>{person.name}</h3>
+						<p>{person.company}</p>
+						<p>{person.role}</p>
+						<p>{person.quote}</p>
+						<p>{person.pokemon}</p>
+						<p>{person.fact}</p>
+					</div>
 				</div>
 			</main> 
 		)

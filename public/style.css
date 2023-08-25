@@ -5,10 +5,14 @@
 
 body {
   background-color: #e4ecf1;
+  display: flex;
+  flex-direction: column;
 }
 #root {
   display: flex;
   background-color: #e4ecf1;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -37,6 +41,11 @@ nav {
   width: 100%;
 }
 
+#update {
+  display: flex;
+  flex-direction: row;
+}
+
 button {
   margin: 5px;
   padding: 10px;
@@ -57,6 +66,7 @@ button:hover {
 #cards {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 }
 
 #person {
