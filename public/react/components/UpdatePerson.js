@@ -21,7 +21,6 @@ export const UpdatePerson = (props) => {
 
     function handleChange(event) {
         const id = event.target.id
-        console.log("I'm changing something: " + event.target.value)
         setUpdateMember({
             ...updateMember, 
             [id]:event.target.value,
@@ -37,7 +36,6 @@ export const UpdatePerson = (props) => {
         })
         if (res.ok) {
             const person = await res.json()
-            console.log("Success: " + person)
         }
     };
 
@@ -71,8 +69,8 @@ export const UpdatePerson = (props) => {
                         <br/>
                         <select className="target" id="role" onChange={handleChange} value={updateMember.role}> 
                             <option value="" >Please choose...</option>
-                            <option value="student" > Student </option>
-                            <option value="coach" > Coach </option>
+                            <option value="Student" > Student </option>
+                            <option value="Coach" > Coach </option>
                         </select>
                     </p>
                     <p>

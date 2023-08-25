@@ -40,7 +40,6 @@ router.patch("/:id", async (req, res, next) => {
     const person = await Person.findByPk(req.params.id);
     person.update(req.body);
     res.status(201).send(person);
-    console.log("success: " + person)
   } catch (error) {
     next(error);
   }

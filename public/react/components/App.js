@@ -36,11 +36,9 @@ export const App = () => {
 	}
 
 	async function fetchPerson (id){
-	  console.log("I have been summoned")
 		try {
 			const response = await fetch(`${apiURL}/people/${id}`);
 			const personData = await response.json();
-			console.log(personData)
 			setPerson(personData);
 			showPerson = true;
 		} catch (err) {
