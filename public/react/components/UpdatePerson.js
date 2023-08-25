@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { PeopleList } from './PeopleList';
 import apiURL from '../api';
-import { Button } from './Button';
 
-export const Button = () => {
+export const UpdatePerson = (props) => {
 
     const [isFormVisible, setIsFormVisible] = useState(false);
-    const [newMember, setNewMember] = useState({
-        name: "",
-        company: "",
-        role: "",
-        image: "https://picsum.photos/200",
+    const [updateMember, setUpdateMember] = useState({
+        name: props.person.name,
+        company: props.person.company,
+        role: props.person.role,
+        image: props.person.image,
+        quote: props.person.quote,
+        pokemon: props.person.pokemon,
+        fact: props.person.fact,
     });
 
     function handleClick() {
@@ -19,22 +21,21 @@ export const Button = () => {
 
     function handleChange(event) {
         const id = event.target.id
-        setNewMember({
-            ...newMember, 
+        setUpdateMember({
+            ...updateMember, 
             [id]:event.target.value,
         })
     };
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const res = await fetch(`${apiURL}/people`, {
-            method: "POST",
+        const res = await fetch(`${apiURL}/people/${props.person.id}`, {
+            method: "PATCH",
             headers: {"content-type": "application/JSON"},
-            body: JSON.stringify(newMember)
+            body: JSON.stringify(updateMember)
         })
         if (res.ok) {
             const person = await res.json()
-            console.log(person)
         }
     };
 
@@ -43,7 +44,7 @@ export const Button = () => {
             <h5 className = "button-title">
 
             </h5>
-            <button onClick={handleClick}>Add member
+            <button onClick={handleClick}>Update member
             </button>
             {isFormVisible && (
                 <form onSubmit={handleSubmit}>
@@ -52,24 +53,24 @@ export const Button = () => {
                             Name
                         </label>
                         <br/>
-                        <input id="name" type="text" value={newMember.name} onChange={handleChange}/>
+                        <input id="name" type="text" value={updateMember.name} onChange={handleChange}/>
                     </p>
                     <p>
                         <label htmlFor='company'>
                             Company name
                         </label>
                         <br/>
-                        <input id="company" type="text" value={newMember.company} onChange={handleChange}/>
+                        <input id="company" type="text" value={updateMember.company} onChange={handleChange}/>
                     </p>
                     <p>
                         <label htmlFor='role'>
-                            Role
+                            Title
                         </label>
                         <br/>
-                        <select className="target" id="role" onChange={handleChange} value={newMember.role}> 
+                        <select className="target" id="role" onChange={handleChange} value={updateMember.role}> 
                             <option value="" >Please choose...</option>
-                            <option value="student" > Student </option>
-                            <option value="coach" > Coach </option>
+                            <option value="Student" > Student </option>
+                            <option value="Coach" > Coach </option>
                         </select>
                     </p>
                     <p>
@@ -77,7 +78,7 @@ export const Button = () => {
                             Member picture
                         </label>
                         <br/>
-                        <input id="image" type="text" value={newMember.image} onChange={handleChange}/>
+                        <input id="image" type="text" value={updateMember.image} onChange={handleChange}/>
                     </p>
                     <p>
                         <button>Submit</button>

@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import apiURL from '../api';
 
 export const Person = (props) => {
-  console.log(props)
   return <>
     <div id="person">
       <img src={props.person.image} width="200" height="200" />

@@ -12,15 +12,6 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
-  try {
-    const person = await Person.create(req.body);
-    res.status(201).send(person);
-  } catch (error) {
-    next(error);
-  }
-});
-
 // GET a person
 router.get("/:id", async (req, res, next) => {
   const personId = req.params.id;
@@ -31,6 +22,28 @@ router.get("/:id", async (req, res, next) => {
     next(error);
   }
 })
+
+// CREATE a person
+router.post("/", async (req, res, next) => {
+  try {
+    const person = await Person.create(req.body);
+    res.status(201).send(person);
+  } catch (error) {
+    next(error);
+  }
+});
+
+// UPDATE a person
+
+router.patch("/:id", async (req, res, next) => {
+  try {
+    const person = await Person.findByPk(req.params.id);
+    person.update(req.body);
+    res.status(201).send(person);
+  } catch (error) {
+    next(error);
+  }
+});
 
 // DELETE a person
 router.delete("/:id", async (req, res, next) => {
