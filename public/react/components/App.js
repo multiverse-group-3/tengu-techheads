@@ -19,7 +19,7 @@ export const App = () => {
 	};
 	const [people, setPeople] = useState([]);
 	const [activeFilter, setActiveFilter] = useState("all");
-	const [person,setPerson] = useState(null)
+	const [person, setPerson] = useState(null)
 	const filteredPeople = people.filter(filters[activeFilter]);
 	let showPerson = false;
 

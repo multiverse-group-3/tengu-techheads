@@ -66,3 +66,65 @@ button:hover {
   border: #797a9e solid 2px;
   text-align: center;
 }
+
+
+
+/* add form css style */
+
+#name {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 300%;
+}
+
+#company {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 300%;
+
+}
+
+#role {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 300%;
+
+}
+
+#image {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 300%;
+}
+
+/* .target {
+  width: 100%;
+} */
+
+#name[type=text]:focus {
+  background-color: c9d9e3;
+}
+
+#company[type=text]:focus {
+  background-color: c9d9e3;
+}
+
+#role[type=text]:focus {
+  background-color: lightblue;
+} 
+
+#image[type=text]:focus {
+  background-color: c9d9e3;
+}

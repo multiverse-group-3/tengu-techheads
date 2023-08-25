@@ -35,6 +35,8 @@ export const Button = () => {
         if (res.ok) {
             const person = await res.json()
             console.log(person)
+        } else {
+            throw new Error("please enter a name");
         }
     };
 
