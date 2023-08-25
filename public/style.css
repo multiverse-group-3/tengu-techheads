@@ -28,7 +28,7 @@ main {
   margin: 50px
 }
 
-navbar {
+nav {
   display: flex;
   justify-content: space-between;
   margin: 5px;
